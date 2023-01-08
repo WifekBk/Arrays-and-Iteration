@@ -63,3 +63,113 @@ function arrayFor(array) {
      }
      return res 
  }  
+
+ //9
+ function average(array) {
+var res=0;
+var sum=0;
+for (i=0; i<array.length; i++){
+    sum+= array[i]
+}
+    return res= sum/array.length
+}  
+
+//10
+function square(array) {
+  for (i=0; i<array.length; i++){
+      array[i]*=array[i]
+  } 
+    return array
+}  
+
+//11
+function isArray(array) {
+   if (typeof array === "object"){
+       return true 
+   }
+    return false
+}  
+
+//More Practice
+//1
+function min(array) {
+   var mini=array[0];
+    for (i=1; i<array.length; i++){
+        if (array[i]<mini){
+            mini=array[i]
+        }
+        
+    }
+    return mini
+}  
+
+//2
+function max(array) {
+   var maxi=array[0];
+    for (i=1; i<array.length; i++){
+        if (array[i]>maxi){
+            maxi=array[i]
+        }
+        
+    }
+    return maxi
+}  
+
+//3
+function shortestString(array) {
+   var mini=array[0].length;
+    for (i=1; i<array.length; i++){
+        if (array[i].length<mini){
+            mini=array[i].length
+        }
+        
+    }
+    return mini
+}  
+
+//4
+function longestString(array) {
+   var maxi=array[0].length;
+    for (i=1; i<array.length; i++){
+        if (array[i].length>maxi){
+            maxi=array[i].length
+        }
+        
+    }
+    return maxi
+}  
+
+//5
+function shortStr(ar) {
+    var mini=ar[0].length;
+     var x =ar[0]
+     for (i=1; i<ar.length; i++){
+         if (ar[i].length<mini){
+             mini=ar[i].length
+             x = ar[i]
+         }
+         
+     }
+     return x
+ }  
+ function longStr(arr) {
+     var maxi=arr[0].length;
+      var y= '';
+      for (i=1; i<arr.length; i++){
+          if (arr[i].length>maxi){
+              maxi=arr[i].length
+              y = arr[i]
+          }
+          
+      }
+      return y;
+  }
+  function shortestLongest(array) {
+     var T=[];
+       T[0]= shortStr(array);
+       T[1]= longStr(array);
+       return T;
+   }  
+
+   //6
+   
