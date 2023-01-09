@@ -170,6 +170,96 @@ function shortStr(ar) {
        T[1]= longStr(array);
        return T;
    }  
+   // 5 other solution
+   function shortestLongest(array) {
+    var T=[];
+       var x=array[0];
+       var y=array[array.length-1];
+       for(i=0; i<array.length; i++){
+           if (x.length>array[i].length){
+               x= array[i];
+           }
+           T[0]=x;
+       }
+       for (z=array.length-1; z>=0; z--){
+               if (y.length<array[z].length){
+                   y=array[z];
+               }
+           T[1]=y;
+       }
+       return T;
+       
+   }  
 
    //6
+   function minMax(array) {
+    var T=[];
+      var x=array[0];
+      var y=array[array.length-1];
+      for(i=0; i<array.length; i++){
+          if (x>array[i]){
+              x= array[i];
+          }
+          T[0]=x;
+      }
+      for (z=array.length-1; z>=0; z--){
+              if (y<array[z]){
+                  y=array[z];
+              }
+          T[1]=y;
+      }
+      return T;
+      
+  }  
+
+  //7 
+  function multiplyBy(array, number) {
+    var x= array;
+     for(i=0; i<array.length; i++){
+         x[i]*=number
+     }
+     return x
+ } 
+
+ //8
+ function multiplyByIndex(array) {
+    var x= array;
+      for(i=0; i<array.length; i++){
+          x[i]*=i
+      }
+      return x 
+  }  
+
+  //9
+  function lengths(array) {
+    var x=array;
+     for (i=0; i<array.length; i++){
+         x[i]= x[i].length
+     }
+     return x
+ }  
+
+ //10
+ function totalNumberOfCharacters(array) {
+    var ch= array[0].length;
+       for (i=1; i<array.length; i++){
+           ch+= array[i].length
+       }
+       return ch;
+   }  
+
+   // Advanced
+   //1
+   function filterEvenLengthWords(array) {
+    var x=[];
+     for (i=0; i<array.length; i++){
+        if (array[i].length%2===0){
+            x.push(array[i])
+        }
+    }
+     return x
+ }  
+
+ //2
+ 
    
